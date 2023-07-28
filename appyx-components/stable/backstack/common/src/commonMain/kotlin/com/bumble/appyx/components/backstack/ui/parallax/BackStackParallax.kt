@@ -36,7 +36,7 @@ class BackstackParallax<InteractionTarget : Any>(
     private val right = TargetUiState(
         elementWidth = width,
         offsetMultiplier = 1f,
-        shadow = Shadow.Target(value = 0f, easing = slowOutFastInEasing),
+//        shadow = Shadow.Target(value = 0f, easing = slowOutFastInEasing),
     )
 
     private val bottom = TargetUiState(
@@ -49,7 +49,7 @@ class BackstackParallax<InteractionTarget : Any>(
     private val top = TargetUiState(
         elementWidth = width,
         offsetMultiplier = 0f,
-        shadow = Shadow.Target(25f),
+//        shadow = Shadow.Target(25f),
         zIndex = ZIndex.Target(2f),
     )
 

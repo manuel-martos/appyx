@@ -33,7 +33,7 @@ internal fun BackStackParallaxSample(
             scope = coroutineScope,
             model = model,
             motionController = { BackstackParallax(it) },
-            gestureFactory = { BackstackParallax.Gestures(it) },
+//            gestureFactory = { BackstackParallax.Gestures(it) },
             animationSpec = spring(stiffness = Spring.StiffnessVeryLow),
         )
     val actions = mapOf(

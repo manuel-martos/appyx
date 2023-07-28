@@ -17,7 +17,7 @@ kotlin {
         version = "1.0.0"
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
-        ios.deploymentTarget = "17.0"
+        ios.deploymentTarget = "14.1"
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
@@ -36,6 +36,7 @@ kotlin {
                 implementation(compose.components.resources)
                 implementation(project(":appyx-components:stable:spotlight:spotlight"))
                 implementation(project(":appyx-components:stable:backstack:backstack"))
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
             }
         }
         val androidMain by getting {
@@ -73,17 +74,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlin {
-        jvmToolchain(11)
-    }
+//    kotlin {
+//        jvmToolchain(11)
+//    }
 }
 
-compose.experimental {
-    uikit.application {
-        projectName = "Appyx"
-        bundleIdPrefix = "com.bumble.appyx"
-    }
-}
+//compose.experimental {
+//    uikit.application {
+//        projectName = "Appyx"
+//        bundleIdPrefix = "com.bumble.appyx"
+//    }
+//}
 
 dependencies {
     add("kspCommonMainMetadata", project(":ksp:mutable-ui-processor"))

@@ -12,7 +12,7 @@ import com.bumble.appyx.interactions.core.ui.state.MutableUiStateSpecs
 @MutableUiStateSpecs
 class TargetUiState(
     val position: Position.Target = Position.Target(DpOffset.Zero),
-    val shadow: Shadow.Target,
+//    val shadow: Shadow.Target,
     val colorOverlay: ColorOverlay.Target,
     val zIndex: ZIndex.Target,
 ) {
@@ -21,7 +21,7 @@ class TargetUiState(
         elementWidth: Float,
         offsetMultiplier: Float,
         colorOverlay: ColorOverlay.Target = ColorOverlay.Target(0f),
-        shadow: Shadow.Target = Shadow.Target(0f),
+//        shadow: Shadow.Target = Shadow.Target(0f),
         zIndex: ZIndex.Target = ZIndex.Target(0f),
     ) : this(
         position = Position.Target(
@@ -31,7 +31,7 @@ class TargetUiState(
             ),
         ),
         colorOverlay = colorOverlay,
-        shadow = shadow,
+//        shadow = shadow,
         zIndex = zIndex,
     )
 }
